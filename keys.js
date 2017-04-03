@@ -1,3 +1,8 @@
+// PLEASE BE NICE AND DO NOT ABUSE
+// I KNOW THIS REPO IS VISIBLE TO EVERYONE
+// I AM JUST TRYING TO LEARN, HERE
+// IT'S READ ONLY ANYWAY
+
 exports.twitterKeys = {
   consumer_key: 'bArQ18qSagxSvIjqVP20Pzi1w',
   consumer_secret: 'lIM3LP4cTZVup7jG9gfKFiduOUw3wA9VtvxI3XgHV15UzIPVJf',
