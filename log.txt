@@ -1,0 +1,44 @@
+
+============================= USER COMMAND ========
+my-tweets
+============================ 20 RECENT TWEETS =====
+@emkamp_atx at Sun Apr 02 19:55:49 +0000 2017:
+W3Schools jsref can be rather cheeky https://t.co/4SL9bX7ZQQ
+0 Favorites  |  0 Retweets
+---------------------------------------------------
+@emkamp_atx at Sun Apr 02 18:32:09 +0000 2017:
+Strange and marvelous. https://t.co/sC8eLlynAH
+  Retweeted from @jsantell:
+  >  MIT team made a VR system that explores the bodily experiences of being a tree, this is so cool.
+https://t.co/PrkN9zZkSr
+0 Favorites  |  0 Retweets
+---------------------------------------------------
+@emkamp_atx at Sun Apr 02 04:23:00 +0000 2017:
+A recent little doodle: https://t.co/f7FcssR09Y Just an idea for an "add to favorites" toggle.
+0 Favorites  |  0 Retweets
+---------------------------------------------------
+@emkamp_atx at Sun Apr 02 04:21:44 +0000 2017:
+Sorry for the spam, just need some dummy tweets for a project I'm working on.
+0 Favorites  |  0 Retweets
+---------------------------------------------------
+@emkamp_atx at Sun Apr 02 01:14:09 +0000 2017:
+Begin test tweeting!
+0 Favorites  |  0 Retweets
+---------------------------------------------------
+
+============================= USER COMMAND ========
+spotify-this-song
+========================= SPOTIFY TOP RESULT ======
+"Master Of Puppets" is by Metallica, from the album "Master Of Puppets"
+Preview the track here: https://p.scdn.co/mp3-preview/60e6f8dab43f176dd9fb5e795d4e6459bad52e9e?cid=null
+
+============================= USER COMMAND ========
+movie-this
+============================ OMDB TOP RESULT ======
+"Jaws" was released in 1975. It was produced in USA
+Ratings: IMDB, 8 // Rotten Tomatoes has no rating for it.
+Starring: Roy Scheider, Robert Shaw, Richard Dreyfuss, Lorraine Gary
+I'd tell you what language(s) it was released in, but OMDB doesn't seem to have that information.
+-- Plot --
+It's a hot summer on Amity Island, a small community whose main business is its beaches. When new Sheriff Martin Brody discovers the remains of a shark attack victim, his first inclination is to close the beaches to swimmers. This doesn't sit well with Mayor Larry Vaughn and several of the local businessmen. Brody backs down to his regret as that weekend a young boy is killed by the predator. The dead boy's mother puts out a bounty on the shark and Amity is soon swamped with amateur hunters and fisherman hoping to cash in on the reward. A local fisherman with much experience hunting sharks, Quint, offers to hunt down the creature for a hefty fee. Soon Quint, Brody and Matt Hooper from the Oceanographic Institute are at sea hunting the Great White shark. As Brody succinctly surmises after their first encounter with the creature, they're going to need a bigger boat.
+---------------------------------------------------
