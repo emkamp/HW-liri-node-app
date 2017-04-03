@@ -12,10 +12,6 @@ var dashes = '---------------------------------------------------';
 function getTweets() {
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
         if (!error) {
-            var tweetHeader = "============================ " + tweetCount + " RECENT TWEETS =====";
-            fs.appendFile(textFile, tweetHeader + '\n');
-            console.log(tweetHeader);
-
             for (i = 0; i < tweets.length; i++) {
                 var tweetTime = tweets[i].created_at;
                 var tweetContent = tweets[i].text;
@@ -152,6 +148,10 @@ if (userCommand === "my-tweets") {
     var client = new Twitter(keys.twitterKeys);
     var tweetCount = 20;
     var params = { screen_name: 'emkamp_atx', count: tweetCount };
+    var tweetHeader = "============================ " + tweetCount + " RECENT TWEETS =====";
+    fs.appendFile(textFile, tweetHeader + '\n');
+    console.log(tweetHeader);
+
     getTweets();
 
     // node liri.js spotify-this-song song-title
