@@ -55,7 +55,7 @@ function getTweets() {
 function getSongData(songTitle) {
     if (songTitle === undefined) {
         var songOutputUndefined = "You didn't enter a song title, so I'll pick one for you.";
-        fs.appendFile(textFile, songOutputUndefined + '\n');
+        fs.appendFile(textFile, songOutputUndefined + '\n' + dashes + '\n');
         console.log(songOutputUndefined);
 
         Spotify.search({ type: 'track', query: 'the sign' }, function (err, data) {
@@ -92,12 +92,20 @@ function getSongData(songTitle) {
 
 function getMovieData(title) {
     Omdb.search(title, function (err, movies) {
+        var topMovie = movies[0];
+
         if (err) {
             console.error(err);
             fs.appendFile(textFile, err + '\n');
+            return;
+        } else if (topMovie === undefined) {
+            var movieErr = "I couldn't find a movie by that name. Let's go with this one instead.";
+            console.log(movieErr + '\n' + dashes);
+            fs.appendFile(textFile, movieErr + '\n' + dashes + '\n');
+            getMovieData(movieTitleDefault);
+            return;
         }
 
-        var topMovie = movies[0];
         Omdb.get({ title: topMovie.title, year: topMovie.year }, true, function (err, movie) {
             if (err) {
                 return console.error(err);
@@ -105,7 +113,7 @@ function getMovieData(title) {
                 var movieOutput1 = "Movie not found! I'll pick one for you instead";
                 console.log(movieOutput1);
                 fs.appendFile(textFile, movieOutput1 + '\n');
-                getMovieData(movieTitle);
+                getMovieData(movieTitleDefault);
             } else {
                 var movieActors = movie.actors.toString().replace(/,/g, ", ");
                 var movieCountries = movie.countries.toString().replace(/,/g, ", ");
@@ -157,6 +165,7 @@ if (userCommand === "my-tweets") {
 
     // node liri.js movie-this movie-title
 } else if (userCommand === "movie-this") {
+    var movieTitleDefault = "Mr Nobody"
     var movieTitle = process.argv[3];
     var omdbHeader = "============================ OMDB TOP RESULT ======";
     console.log(omdbHeader);
@@ -166,8 +175,7 @@ if (userCommand === "my-tweets") {
         var movieOutput3 = "You didn't enter a movie title, so I picked one for you." + '\n' + dashes;
         console.log(movieOutput3);
         fs.appendFile(textFile, movieOutput3 + '\n');
-
-        getMovieData("Mr. Nobody");
+        getMovieData(movieTitleDefault);
     } else {
         var movieTitleSpaced = movieTitle.replace(/-/g, ' ').toLowerCase();
         getMovieData(movieTitleSpaced);
